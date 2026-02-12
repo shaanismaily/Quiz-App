@@ -1,0 +1,209 @@
+html {
+    font-family: 'Lucida Sans', Verdana, sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    padding: 1em;
+
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+.screen p {
+    margin: auto;
+}
+#start-btn {
+    background-color: #0773cb;
+    color: #f0f8ff;
+    font-weight: bold;
+    width: 150px;
+    margin: auto;
+    font-size: 1.1rem;
+}
+
+.container {
+    max-width: 800px;
+    width: 95%;
+    margin: auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 1.3rem 1.5rem;
+    border-radius: 12px;
+}
+
+#questions-container-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#question-count {
+    padding: 0.2rem 0 0.5rem;
+    margin-left: 4px;
+}
+
+#question-text {
+    padding: 0 10px;
+}
+
+#options {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px;
+}
+
+#options div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+#options div:hover {
+    background: #f3f7ff;
+}
+
+#options input:checked+label {
+    background: #e3f2fd;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+
+.cta-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+
+.btn {
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 0.4rem 0.9rem;
+    transition: background-color 0.5s ease;
+}
+
+#next-btn {
+    background-color: #2196f3;
+    color: white;
+}
+
+#next-btn:hover {
+    background-color: #0773cb;
+}
+
+#prev-btn:hover {
+    background-color: aliceblue;
+}
+
+.reset {
+    background-color: #dc2d2d;
+    color: #f0f8ff;
+}
+
+.restart-btn:hover {
+    background-color: #8f2620;
+}
+
+#indicators {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+    gap: 6px;
+    margin: 0 auto 15px;
+    max-width: 800px;
+    width: 95%;
+}
+
+
+.indicator {
+    width: 35px;
+    height: 35px;
+    border: 1px solid #aaa;
+    background: white;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.indicator:hover {
+    transform: scale(1.05);
+}
+
+.indicator.answered {
+    background: #4caf50;
+    color: white;
+}
+
+.indicator.current {
+    background: #2196f3;
+    color: white;
+    font-weight: bold;
+}
+
+#result {
+    text-align: center;
+    padding: 16px 0;
+}
+
+#result p {
+    margin-top: 12px;
+}
+
+#result button {
+    margin-top: 12px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+dialog {
+    max-width: 500px;
+    width: 85%;
+    border: none;
+    inset: 0;
+    border-radius: 12px;
+    margin: auto;
+    padding: 0.9rem 1.2rem;
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
+}
+
+dialog h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin: 12px 6px 0;
+}

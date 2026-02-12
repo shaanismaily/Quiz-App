@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Quiz App</h1>
+    </header>
+    <main>
+        <div id="indicators"></div>
+        <div id="questions-container" class="container">
+            <div id="questions-container-header">
+                <p id="question-count"></p>
+                <div class="timer">
+                    <img src="timer_icon.svg" alt="" style="filter: invert(); color: black;">
+                    <p id="timer"></p>
+                </div>
+            </div>
+
+            <form id="quiz-form">
+                <fieldset>
+                    <legend id="question-text"></legend>
+                    <div id="options">
+
+                    </div>
+                </fieldset>
+                <small style="color: red;"></small>
+                <div class="cta-buttons">
+                    <div>
+                        <button type="button" class="btn reset-btn reset">Reset</button>
+                    </div>
+                    <div>
+                        <button type="button" class="btn" id="prev-btn">Previous</button>
+                        <button type="button" class="btn" id="next-btn">Next</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div id="result" class="container hidden">
+        </div>
+
+        <dialog>
+            <h2>Are you sure you want to Submit the quiz?</h2>
+            <div class="dialog-actions">
+                <button type="button" onclick="renderScore()" class="yes btn">Yes</button>
+                <button type="button" onclick="hideDialog()" class="no btn">No</button>
+            </div>
+        </dialog>
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
